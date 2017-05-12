@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Añadir producto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <!-- Css Files -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/plugins.css" rel="stylesheet" type="text/css">
+        <link href="css/homePopup.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css">
+        <link href="css/animate.css" rel="stylesheet" type="text/css">
+          
+        <!-- Google Font -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        
+
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script src="js/script.js"></script>
+
+    </head>
+    
+    <body>
+        <!-- #page -->
+        <div id="page">
+        <!-- header section -->
+
+        <div id="topping"></div>
+        <section id="top">
+            <header> 
+                <div class="container">                                   
+                    <!-- logo -->
+                    <div id="logo">
+                        <a href="#topping">Terapias<strong>Naturales</strong></a>
+                    </div>
+                    <!-- menu -->
+                    <nav class="navmenu">
+                        <ul>
+                            <li class="scrollable"><a href="/">Bienvenidos</a></li>  
+                            <li class="scrollable"><a href="/suprimir-producto-admin-Alicia">Suprimir producto</a></li>
+                            <li class="scrollable"><a href="/#shop">Sacos Tao</a></li>          
+                        </ul>
+                    </nav><!-- end menu --> 
+                    <div class="clear"></div>
+                </div>
+            </header>   
+
+<h2>Añadir producto<h2>
+
+
+        </section>
+        <section id="home">
+        <section class="page_section" id="contact">
+            <div class="container block-wrap wow fadeInUp">
+            	<div class="row">
+                	<div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                    	<div class="contact_form block">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div id="note"></div>
+                                </div>   
+                            </div> 
+                            <div id="fields"> 
+                                <form id="form_details_products" class="row" action="/anadir-producto-admin-Alicia" method="post" enctype="multipart/form-data">      
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp productPhoto" type="file" name="productPhoto" placeholder="Photo" title="Product Photo" id="photo"> 
+                                    </div>
+                                
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp productName" type="text" name="productName" placeholder="Nombre del producto" title="Product Name"> 
+                                    </div>
+                                  
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp productDescription" type="text" name="productDescription" placeholder="Descripción" title="Product Description">
+                                    </div>
+                                    
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp productPrice" type="text" name="productPrice" placeholder="Precio" title="Price">
+                                    </div>
+                                                                
+                                    <div class="clear"></div>
+                                    <div class="col-md-12">
+                                        <input class="shortcode_button" type="submit" value="Añadir este producto" class="submit">
+                                    </div>
+                                    <div class="clear"></div>
+                                </form> 
+                            </div> 
+                        </div>                
+                    </div> 
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+
+    </body>
+
+</html>

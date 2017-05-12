@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tramitar compra</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <!-- Css Files -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/plugins.css" rel="stylesheet" type="text/css">
+        <link href="css/homePopup.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css">
+        <link href="css/animate.css" rel="stylesheet" type="text/css">
+          
+        <!-- Google Font -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        
+
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script src="js/script.js"></script>
+
+    </head>
+    
+    <body>
+        <!-- #page -->
+        <div id="page">
+        <!-- header section -->
+
+        <div id="topping"></div>
+        <section id="top">
+            <header> 
+                <div class="container">                                   
+                    <!-- logo -->
+                    <div id="logo">
+                        <a href="#topping">Terapias<strong>Naturales</strong></a>
+                    </div>
+                    <!-- menu -->
+                    <nav class="navmenu">
+                        <ul>
+                            <li class="scrollable"><a href="/">Bienvenidos</a></li>  
+                            <li class="scrollable"><a href="/#about">La consulta</a></li>
+                            <li class="scrollable"><a href="/#services">Servicios</a></li>
+                            <li class="scrollable"><a href="/#staff">Quien soy</a></li>
+                            <li class="scrollable"><a href="/#portfolio">Galería</a></li>
+                            <li class="scrollable"><a href="/#shop">Sacos Tao</a></li>          
+                            <li class="scrollable"><a href="/#contact">Contacto</a></li>
+                        </ul>
+                    </nav><!-- end menu --> 
+                    <div class="clear"></div>
+                </div>
+            </header>   
+
+<h2>FORMULARIO DE PAGO <h2>
+
+
+        </section>
+        <section id="home">
+        <section class="page_section" id="contact">
+            <div class="container block-wrap wow fadeInUp">
+            	<div class="row">
+                	<div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                    	<div class="contact_form block">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div id="note"></div>
+                                </div>   
+                            </div> 
+                            <div id="fields"> 
+                                <form id="shop_form" class="row" action="/compra" method="post">                        
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp last-name" type="text" name="lastName" placeholder="Apellido" title="Apellido"> <!-- dans cette balise input (et les suivantes) j'avais fait une erreur : j'avais mis deux fois class= (class= 'inp' et class= 'name' alors qu'on n'a le droit d'en mettre qu'une de class dans une balise ; par contre, si on veut mettre plusieurs class c'est possible mais ça s'écrit comme ça : class= 'inp' 'name' -->
+                                    </div>
+                                  
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp first-name" type="text" name="firstName" placeholder="Nombre" title="Nombre">
+                                    </div>
+                                    
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp email" type="text" name="email" placeholder="Email" title="Email">
+                                    </div>
+                                    
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp phone" type="text" name="phone" placeholder="Teléfono" title="Teléfono">
+                                    </div>
+                                   
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp adress" type="text" name="adress" placeholder="Dirección" title="Dirección">
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp card-number" type="text" name="card-number" placeholder="Numero de Tarjeta" title="Numero de Tarjeta">
+                                    </div>
+                                   
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp card-cvc" type="text" name="card-cvc" placeholder="CVC" title="CVC">
+                                    </div>
+                                   
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp card-expiry-month" type="text" name="card-expiry-month" placeholder="Mes de expiración" title="Mes de expiracion">
+                                    </div>
+                                  
+                                    <div class="col-md-12 col-sm-12">
+                                        <input class="inp card-expiry-year" type="text" name="card-expiry-year" placeholder="Año de expiración" title="Año de expiración">
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-md-12">
+                                         <input type="text" name="productId" value="<%=idProduct%>">
+                                        <input class="shortcode_button" type="submit" value="Enviar pago" class="submit">
+                                    </div>
+                                    <div class="clear"></div>
+                                </form> 
+                            </div> 
+                        </div>                
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> --> <!-- cette ligne et les deux suivantes, soit je les mets là (c'est à dire après le code html du formulaire et je ne mets pas ça dans le fichier script.js : 
+
+            /*Détecter le chargement complet de la page:
+            $("document").ready(function() {
+            // DOM chargé 
+            })*/
+
+        soit je laisse ces trois lignes en haut dans le head mais alors je préviens le navigateur dans le fichier script.js avec le bloc de code juste au-dessus c'est-à-dire : 
+
+            /*Détecter le chargement complet de la page:
+            $("document").ready(function() {
+            // DOM chargé 
+            })*/
+
+        parce qu'en fait il y a un ordre de lecture à respecter. -->
+
+       <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+       <!-- <script src="script.js"></script> -->
+
+    </div>
+
+    </body>
+
+</html>
