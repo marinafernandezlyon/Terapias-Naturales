@@ -343,6 +343,8 @@ html[xmlns] .slides {display: block;}
 	font-size:32px;
 	line-height:48px;
 }
+
+
 .flex-direction-nav .flex-prev {
 	left: 50px;
 	padding-right:4px;
@@ -351,6 +353,13 @@ html[xmlns] .slides {display: block;}
 	right: 50px;
 	padding-left:4px;
 }
+
+
+
+
+
+
+
 .flexslider:hover .flex-next:hover,
 .flexslider:hover .flex-prev:hover {opacity: 1;
 }

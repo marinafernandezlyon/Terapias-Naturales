@@ -13,8 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 var mongoose= require('mongoose');
-mongoose.connect('mongodb://localhost/terapias_naturales_alicia' , function(err) {
+mongoose.connect('mongodb://marinaole:24052012AMOUR@ds133991.mlab.com:33991/terapias-naturales' , function(err) {
 });
+//mongoose.connect('mongodb://localhost/terapias_naturales_alicia' , function(err) {
+//});
 //Les schémas : ils permettent de définir les types des données:
 var productSchema = mongoose.Schema({
     productName: String,
