@@ -67,6 +67,48 @@ app.get('/', function (req, res) {
 	});
 });
 
+
+
+
+
+
+
+
+app.get('/cesta', function (req,res) {
+	console.log(req.query.id)
+	res.render('shopping-cart', {idProduct : req.query.id});
+});
+
+app.post('/cesta', function (req, res) {
+	console.log(req.body.productId);
+	// Je réalise un filtre pour ne récupérer que le produit qui a cet id (celui qui est dans le console.log)
+ 	ProductModel.find( {_id: req.body.productId} , function (err, product) { //findOne ça veut dire donne-moi, mongodb, le premier produit de la liste qui a cet id (au cas où il en aurait plusieurs mais ce n'est pas le cas de toute façon)
+ 		console.log(product);// juste au-dessus, devant id, il y a un underscore parce que dans mongodb c écrit comme ça, il y a un underscore devant.
+ 		
+		res.render('shop_form');
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/compra', function (req,res) {
 	console.log(req.query.id)
 	res.render('shop_form', {idProduct : req.query.id}); //je déverse l'id dans la boite idProduct qui correspond à ma vue (fichier ejs) =dans la page du formulaire de paiement.
@@ -111,6 +153,11 @@ app.get('/delete', function (req, res) {
 });
 
 
-app.listen(80, function () {
+/*app.listen(80, function () {
   console.log("Server listening on port 80");
+});*/
+
+var port= (process.env.PORT || 80);
+app.listen(port, function () {
+  console.log(“Server listening on port 80”);
 });
